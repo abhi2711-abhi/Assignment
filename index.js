@@ -47,7 +47,6 @@ app.get('/school', (req, res) => {
 app.post("/role", async(req,res) =>{
     
     const roleEmployee = new Role ({
-            // roleid:req.body.roleid,
             name: req.body.name,
             scope:req.body.scope,
     })       
@@ -62,8 +61,7 @@ app.post("/usercreate", async(req,res) =>{
             userid:req.body.userid,
             name: req.body.name,
             email:req.body.email,
-            password:req.body.password,
-            // roleid:req.body.roleid,
+            password:req.body.password
         })       
         console.log(usercreateEmployee)
         const usered = await usercreateEmployee.save()
@@ -109,7 +107,6 @@ app.post("/student", async(req,res) =>{
 app.post("/school", async(req,res) =>{
     
     const schoolEmployee = new School ({
-            schoolid:req.body.schoolid,
             name: req.body.name,
             city: req.body.city,
             state: req.body.state,
