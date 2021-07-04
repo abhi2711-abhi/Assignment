@@ -67,7 +67,7 @@ app.post("/usercreate", async(req,res) =>{
         const usered = await usercreateEmployee.save()
         res.status(201).send(usercreateEmployee)
     }catch(err){
-        res.status(404).send(err)
+        res.status(404).send("email can not be duplicate")
         console.log("data can't store")
     }
 })
