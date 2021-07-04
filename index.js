@@ -58,7 +58,7 @@ app.post("/role", async(req,res) =>{
 app.post("/usercreate", async(req,res) =>{
     try{
         const usercreateEmployee = new Usercreate ({
-            userid:req.body.userid,
+        
             name: req.body.name,
             email:req.body.email,
             password:req.body.password
@@ -95,9 +95,7 @@ app.post("/userlogin", async(req, res) =>{
 app.post("/student", async(req,res) =>{
     
     const studentEmployee = new Student ({
-            name: req.body.name,
-            userid:req.body.userid,
-            schoolid:req.body.schoolid,
+            name: req.body.name
     })       
     console.log(studentEmployee)
     const studented = await studentEmployee.save()
